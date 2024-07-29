@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Prakriti</title>
+</head>
+
+<body>
+    <div class="navBar">
+        <img src="prakriti-logo-img.png" class="prakriti-logo">
+
+
+
+
+        <div id="menuToggle">
+            <input type="checkbox" />
+
+            <div id="menuOverlay"></div>
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+
+            <ul id="menu">
+                <a href="#">
+                    <li>Home</li>
+                </a>
+                <a href="https://prakriti-about.vercel.app/">
+                    <li>About</li>
+                </a>
+                <div class="collections-sidebar-menu">
+
+                    <label for="touch">
+                        <li>Collections<i class='bx bxs-chevron-down'></i></li>
+                    </label>
+
+
+                    <nav>
+
+                        <input type="checkbox" id="touch">
+
+                        <ul class="slide">
+                            <a class="collections-redirect" href="#">
+                                <li>
+                                    <img src="sabai-treasures.png" class="collections-img">
+                                    <div>Sabai Treasures</div>
+                                </li>
+                            </a>
+                            <a class="collections-redirect" href="#">
+                                <li>
+                                    <img src="bamboo-bliss.png" class="collections-img">
+                                    <div>Bamboo Bliss</div>
+                                </li>
+                            </a>
+                            <a class="collections-redirect" href="#">
+                                <li>
+                                    <img src="terra-touch.png" class="collections-img">
+                                    <div>Terra Touch</div>
+                                </li>
+                            </a>
+                            <a class="collections-redirect" href="#">
+                                <li>
+                                    <img src="loom-legacy.png" class="collections-img">
+                                    <div>Loom Legacy</div>
+                                </li>
+                            </a>
+                            <a class="collections-redirect" href="#">
+                                <li>
+                                    <img src="metal-essence.png" class="collections-img">
+                                    <div>Metal Essence</div>
+                                </li>
+                            </a>
+                            <a class="collections-redirect" href="#">
+                                <li>
+                                    <img src="prakriti-collections.jpeg" class="collections-img">
+                                    <div>Prakriti Collection</div>
+                                </li>
+                            </a>
+                        </ul>
+
+                    </nav>
+
+
+
+
+
+
+
+                </div>
+                <a href="#">
+                    <li>Wishlist <i class='bx bxs-heart'></i></li>
+                </a>
+                <a href="#">
+                    <li>Orders <i class="fa-solid fa-bag-shopping"></i></li>
+                </a>
+            </ul>
+        </div>
+
+
+
+
+
+
+        <div class="navbar-navigations">
+            <div class="options home"><a href="#">Home</a></div>
+            <div class="options about"><a href="#">About</a></div>
+            <div class="options collections">
+
+
+
+                <span>Collections</span>
+                <i class='bx bxs-chevron-down'></i>
+                <div class="dots" onclick="this.classList.toggle('active');">
+                    <div class="shadow cut"></div>
+                    <div class="container cut">
+                        <div class="drop cut2"></div>
+                    </div>
+                    <div class="list">
+                        <ul>
+                            <a class="collections-redirect" href="#">
+                                <li>
+                                    <img src="sabai-treasures.png" class="collections-img">
+                                    Sabai Treasures
+                                </li>
+                            </a>
+                            <a class="collections-redirect" href="#">
+                                <li>
+                                    <img src="bamboo-bliss.png" class="collections-img">
+                                    Bamboo Bliss
+                                </li>
+                            </a>
+                            <a class="collections-redirect" href="#">
+                                <li>
+                                    <img src="terra-touch.png" class="collections-img">
+                                    Terra Touch
+                                </li>
+                            </a>
+                            <a class="collections-redirect" href="#">
+                                <li>
+                                    <img src="loom-legacy.png" class="collections-img">
+                                    Loom Legacy
+                                </li>
+                            </a>
+                            <a class="collections-redirect" href="#">
+                                <li>
+                                    <img src="metal-essence.png" class="collections-img">
+                                    Metal Essence
+                                </li>
+                            </a>
+                            <a class="collections-redirect" href="#">
+                                <li>
+                                    <img src="prakriti-collections.jpeg" class="collections-img">
+                                    Prakriti Collection
+                                </li>
+                            </a>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="cursor" onclick="document.querySelector('.dots').classList.toggle('active');"></div>
+
+
+
+
+
+
+            </div>
+            <div class="options contact"><a href="#">Contact</a></div>
+            <div class="options wishlist"><a href="#">Wishlist <i class='bx bxs-heart'></i></a></div>
+            <div class="options orders"><a href="#">Orders</a></div>
+        </div>
+    </div>
+
+    <div class="gap"></div>
+    <div class="page">
+
+        <div class="product-wrapper">
+            <div class="product-img">
+                <div class="image-icon">
+                    <img src="img1.jpg">
+                    <button id="heart-button-toggle" onclick="changeHeart()">
+                        <i class='fa-regular fa-heart'></i>
+                    </button>
+                </div>
+                <button class="buy-now-btn">BUY NOW <i class="fa-solid fa-cart-shopping"></i></button>
+            </div>
+
+
+            <div class="product-description">
+                <h2>Terra Touch Wall Art Set - Set of 3 Wall Hangings</h2>
+                <div class="description-begin">
+                    <div class="price-quantity">
+                        <h1>₹799</h1>
+                        <div class="counter">
+                            <button id="decrease">-</button>
+                            <span id="quantity">Qty: 0</span>
+                            <button id="increase">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-details">
+                    <div class="description">
+                        <h3>Description:</h3>
+                        <p>
+                            Bring the warmth of the earth into your home with our Terra Touch Wall Art Set. Handcrafted from natural clay, these wall hangings feature earthy designs that add a rustic and eco-friendly charm to any room.
+
+                        </p>
+                    </div>
+                    <div class="set-includes">
+                        <h3>Set Includes:</h3>
+                        <p>
+                        <ul>
+                            <li>3 Handcrafted Wall Hangings</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="features">
+                        <h3>Features:</h3>
+                        <p>
+                        <ul>
+                            <li><b>Material: </b>Eco-friendly Bamboo</li>
+                            <li><b>Design: </b>Intricately woven geometric patterns</li>
+                            <li><b>Colors: </b>Natural bamboo tones</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="dimensions">
+                        <h3>Dimensions:</h3>
+                        <p>
+                        <ul>
+                            <li>Large Wall Hanging: 14 inches diameter</li>
+                            <li>Medium Wall Hanging: 12 inches diameter</li>
+                            <li>Small Wall Hanging: 10 inches diameter</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="instructions">
+                        <h3>Care Instructions:</h3>
+                        <p>
+                        <ul>
+                            <li>Wipe gently with a dry cloth</li>
+                            <li>Avoid exposure to moisture</li>
+                        </ul>
+                        </p>
+                    </div>
+                    <div class="additional">
+                        <h3>Additional Information:</h3>
+                        <p>
+                        <ul>
+                            <li>Handcrafted: Each bag is uniquely made by skilled artisans</li>
+                            <li>Eco-friendly: Made from sustainable clay</li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="you-might-also-like-wrapper">
+            <div class="you-might-also-like-head">
+                <div class="ymal-line1"></div>
+                <div>
+                    <h1>YOU MIGHT ALSO LIKE</h1>
+                </div>
+                <div class="ymal-line2"></div>
+            </div>
+            <div class="products">
+                <figure>
+                    <img src="img4.jpg" class="figcaption-img">
+                    <figcaption>
+                        <p class="description">
+                            Bamboo Bliss Storage Baskets - Set of 3 Baskets
+                        </p>
+                        <p class="price">
+                            ₹799
+                        </p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="img8.jpg" class="figcaption-img">
+                    <figcaption>
+                        <p class="description">
+                            Bamboo Bliss Decorative Tray
+                        </p>
+                        <br>
+                        <p class="price">
+                            ₹999
+                        </p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="linen-saree.png" class="figcaption-img">
+                    <figcaption>
+                        <p class="description">
+                            Handloom Linen Saree - Green - 1 Saree with Blouse Piece
+                        </p>
+                        <p class="price">
+                            ₹1999
+                        </p>
+                    </figcaption>
+                </figure>
+                <!-- <figure>
+                <img src="img3.png" class="figcaption-img">
+                <figcaption>
+                    <p class="description">
+                        Handloom Linen Saree - Green - 1 Saree with Blouse Piece
+                    </p>
+                    <p class="price">
+                        ₹1,999
+                    </p>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="img3.png" class="figcaption-img">
+                <figcaption>
+                    <p class="description">
+                        Sabai Grass Hanging Plant Holder
+                    </p>
+                    <p class="price">
+                        ₹699
+                    </p>
+                </figcaption>
+            </figure> -->
+
+            </div>
+
+        </div>
+
+        <div class="customer-reviews-wrapper">
+            <div class="customer-reviews-head">
+                <div class="cr-line1"></div>
+                <div>
+                    <h1>CUSTOMER REVIEWS</h1>
+                </div>
+                <div class="cr-line2"></div>
+            </div>
+            <div class="feedback">
+                <h2>Is this product worth it?</h2>
+                <span class="thumbs-up">
+                    <i id="thumbs-up-icon" class="fa-regular fa-thumbs-up"></i>
+                    <span id="thumbs-up-count" class="count">100</span>
+                </span>
+                <span class="thumbs-down">
+                    <i id="thumbs-down-icon" class="fa-regular fa-thumbs-down"></i>
+                    <span id="thumbs-down-count" class="count">0</span>
+                </span>
+            </div>
+            <div class="review-container">
+                <div id="posts">
+                    <div class="post">
+                        <img src="person1.jpeg">
+                        <div class="review">
+                            <div class="username"><b>Username</b></div>
+                            <div class="review-text">
+                                The product suits really well on my wall and it just adds the charm to the room
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img src="person2.jpeg">
+                        <div class="review">
+                            <div class="username"><b>Username</b></div>
+                            <div class="review-text">
+                                A must buy product
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="textarea">
+                <img src="person3.jpeg">
+                <div class="post-button" onkeypress="">
+                    <textarea id="newReview" onkeypress="handleKeyPress(event)" placeholder="Add your review"></textarea>
+                    <div class="textarea-controls">
+                        <i class='bx bx-laugh'></i>
+                        <i class='bx bx-paperclip'></i>
+                        <i class='bx bxs-send' onclick="postReview()"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="line-before-footer"></div>
+
+        <div class="footer-wrapper">
+            <div class="footer-contact">
+                <div class="email">
+                    <i class='fa-solid fa-envelope'></i>
+                    <span>care@prakriti.com</span>
+                </div>
+                <div class="phone-number">
+                    <i class='fa-solid fa-phone'></i>
+                    +91 63768 83999
+                </div>
+            </div>
+            <div class="footer-categories-wrapper footer-head">
+                <h3>Categories</h3>
+                <div style="height: 0.2rem;"></div>
+                <div class="categories"><a href="#">Sabai Treasures</a></div>
+                <div class="categories"><a href="#">Bambooo Bliss</a></div>
+                <div class="categories"><a href="#">Terra Touch</a></div>
+                <div class="categories"><a href="#">Loom Legacy</a></div>
+                <div class="categories"><a href="#">Metal Essence</a></div>
+                <div class="categories"><a href="#">Prakriti Collections</a></div>
+            </div>
+            <div class="footer-information-wrapper footer-head">
+                <h3>Information</h3>
+                <div style="height: 0.2rem;"></div>
+                <div class="information"><a href="#">About</a></div>
+                <div class="information"><a href="#">Contact</a></div>
+                <div class="information"><a href="#">Terms & Conditions</a></div>
+            </div>
+            <div class="footer-quick-links-wrapper footer-head">
+                <h3>Quick Links</h3>
+                <div style="height: 0.2rem;"></div>
+                <div class="quick-links"><a href="#">Orders</a></div>
+                <div class="quick-links"><a href="#">About</a></div>
+            </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+
+
+        let thumbsUpCount = 100;
+        let thumbsDownCount = 0;
+        let thumbsUpClicked = false;
+        let thumbsDownClicked = false;
+
+        document.getElementById('thumbs-up-icon').addEventListener('click', () => {
+            if (!thumbsUpClicked) {
+                thumbsUpCount++;
+                thumbsUpClicked = true;
+                document.getElementById('thumbs-up-icon').className = 'fa-solid fa-thumbs-up';
+                document.getElementById('thumbs-up-count').textContent = thumbsUpCount;
+
+                if (thumbsDownClicked) {
+                    thumbsDownCount--;
+                    thumbsDownClicked = false;
+                    document.getElementById('thumbs-down-icon').className = 'fa-regular fa-thumbs-down';
+                    document.getElementById('thumbs-down-count').textContent = thumbsDownCount;
+                }
+            }
+            else {
+                thumbsUpCount--;
+                thumbsUpClicked = false;
+                document.getElementById('thumbs-up-icon').className = 'fa-regular fa-thumbs-up';
+                document.getElementById('thumbs-up-count').textContent = thumbsUpCount;
+            }
+
+        });
+
+        document.getElementById('thumbs-down-icon').addEventListener('click', () => {
+            if (!thumbsDownClicked) {
+                thumbsDownCount++;
+                thumbsDownClicked = true;
+                document.getElementById('thumbs-down-icon').className = 'fa-solid fa-thumbs-down';
+                document.getElementById('thumbs-down-count').textContent = thumbsDownCount;
+
+                if (thumbsUpClicked) {
+                    thumbsUpCount--;
+                    thumbsUpClicked = false;
+                    document.getElementById('thumbs-up-icon').className = 'fa-regular fa-thumbs-up';
+                    document.getElementById('thumbs-up-count').textContent = thumbsUpCount;
+                }
+            }
+            else {
+                thumbsDownCount--;
+                thumbsDownClicked = false;
+                document.getElementById('thumbs-down-icon').className = 'fa-regular fa-thumbs-down';
+                document.getElementById('thumbs-down-count').textContent = thumbsDownCount;
+            }
+        });
+
+
+        function myFunction(x) {
+            bigNavBar = document.querySelector(".navbar-navigations");
+
+            if (x.matches) {
+                bigNavBar.remove();
+            }
+        }
+
+        var x = window.matchMedia("(max-width: 880px)")
+
+        myFunction(x);
+
+        x.addEventListener("change", function () {
+            myFunction(x);
+        });
+
+
+
+        function loadMore() {
+            var caughtUpMessage = document.querySelector(".load-more-message");
+            caughtUpMessage.style.display = 'block';
+            caughtUpMessage.style.position = 'fixed';
+            caughtUpMessage.style.left = '50%';
+            caughtUpMessage.style.top = '10%';
+            caughtUpMessage.style.transform = 'translate(-50%, -50%)';
+
+            setTimeout(function () {
+                caughtUpMessage.style.display = 'none';
+            }, 5000);
+
+        }
+
+        const decreaseButton = document.getElementById('decrease');
+        const increaseButton = document.getElementById('increase');
+        const quantitySpan = document.getElementById('quantity');
+        let quantity = 0;
+
+        decreaseButton.addEventListener('click', () => {
+            if (quantity > 0) {
+                quantity--;
+                quantitySpan.textContent = `Qty: ${quantity}`;
+            }
+        });
+
+        increaseButton.addEventListener('click', () => {
+            quantity++;
+            quantitySpan.textContent = `Qty: ${quantity}`;
+        });
+
+
+        function changeHeart() {
+            let heartButton = document.getElementById("heart-button-toggle");
+            heartButton.innerHTML = heartButton.innerHTML.includes("fa-regular") ?
+                "<i class='fa-solid fa-heart' style='color: #fff;'></i>" :
+                "<i class='fa-regular fa-heart'></i>";
+        }
+
+
+
+        function postReview() {
+            var newReviewText = document.getElementById('newReview').value.trim();
+            if (newReviewText !== "") {
+                var newReviewDiv = document.createElement('div');
+                var newReviewDiv2 = document.createElement('div');
+                var newReviewDiv3 = document.createElement('div');
+                var newReviewDiv4 = document.createElement('div');
+                var newReviewImg = document.createElement('img');
+
+                newReviewDiv3.innerHTML = "<b>Username</b>";
+                newReviewImg.src = "person3.jpeg";
+
+                newReviewDiv4.textContent = newReviewText;
+                newReviewDiv.classList.add('review');
+                newReviewDiv2.classList.add('post');
+                newReviewDiv3.classList.add('username');
+                newReviewDiv4.classList.add('review-text');
+
+                newReviewDiv.appendChild(newReviewDiv3);
+                newReviewDiv.appendChild(newReviewDiv4);
+                newReviewDiv2.appendChild(newReviewImg);
+                newReviewDiv2.appendChild(newReviewDiv);
+
+                document.getElementById('posts').appendChild(newReviewDiv2);
+                document.getElementById('newReview').value = "";
+            }
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault(); // Prevent the default action of the Enter key (which is to create a new line)
+                postReview();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
